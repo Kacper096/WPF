@@ -77,6 +77,7 @@ namespace EF.Services.CustomerService
                        Country = x.Country,
                        City = x.City
                     }).ToList();
+                    
                 }
                 catch(ArgumentException e)
                 {
@@ -87,7 +88,50 @@ namespace EF.Services.CustomerService
 
                     throw new Exception(e.StackTrace);
                 }
+                finally
+                {
+                    context.Dispose();
+                }
             }
+        }
+
+        /// <summary>
+        /// Finds customer in the database
+        /// </summary>
+        /// <param name="Id">Input parameter Id from UI</param>
+        /// <returns></returns>
+        public Customer FindById(int Id)
+        {
+            Customer _findedCust;
+            using (var context = new NorthwindEntities())
+            {
+                try
+                {
+                    _findedCust = context.Customers.Where(x => x.CustomerID.ToString().ToLowerInvariant().Contains(Id.ToString().ToLowerInvariant()))
+                         .SingleOrDefault();
+
+                }
+                catch (ArgumentNullException e)
+                {
+                    //Logs
+                    throw;
+                }
+                catch (InvalidOperationException e)
+                {
+                    throw;
+                }
+                catch (Exception e)
+                {
+                    throw;
+                }
+                finally
+                {
+                    context.Dispose();
+                }
+                
+            }
+
+            return _findedCust;
         }
 
         /// <summary>
@@ -115,16 +159,76 @@ namespace EF.Services.CustomerService
         /// <param name="Id">Customer's Id</param>
         public void RemoveCustomer(int Id)
         {
+            Customer _findedCust = this.FindById(Id: Id);
+
             using (var context = new NorthwindEntities())
             {
-                Customer _findedCust = context.Customers.Where(x => x.CustomerID.ToString().ToLowerInvariant().Contains(Id.ToString().ToLowerInvariant()))
-                    .SingleOrDefault();
-
-                if(_findedCust != null)
-                    context.Customers.Remove(_findedCust);
-                context.SaveChanges();
+                try
+                {
+                   
+                    if (_findedCust != null)
+                        context.Customers.Remove(_findedCust);
+                    context.SaveChanges();
+                    
+                }
+                catch(NotSupportedException e)
+                {
+                    //Here would be write in logs
+                    throw;
+                }
+                catch(ObjectDisposedException e)
+                {
+                    throw;
+                }
+                catch(InvalidOperationException e)
+                {
+                    throw;
+                }
+                finally
+                {
+                    context.Dispose();
+                }
             }
         }
+
+        /// <summary>
+        /// Updates customer in the database
+        /// </summary>
+        /// <param name="Id"></param>
+        public void UpdateCustomer(Customer customer)
+        {
+            Customer _findedCust;
+
+            
+            if(int.TryParse(customer.CustomerID, out int result))
+            {
+                _findedCust = this.FindById(result);
+
+                if(!customer.Equals(_findedCust))
+                {
+
+                    using (var context = new NorthwindEntities())
+                    {
+                        try
+                        {
+                            context.Entry(_findedCust).CurrentValues.SetValues(customer);
+                            context.SaveChanges();
+                        }
+                        catch(Exception e)
+                        {
+                            throw;
+                        }
+                        finally
+                        {
+                            context.Dispose();
+                        }
+                     }
+                }
+            }
+
+        }
         #endregion
+
+        
     }
 }
