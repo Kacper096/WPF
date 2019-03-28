@@ -9,3 +9,17 @@ D:\Kacper\Documents\Visual Studio\C#\WPF\DapperDatabase\Data\Model\EF\obj\Debug\
 D:\Kacper\Documents\Visual Studio\C#\WPF\DapperDatabase\Data\Model\EF\obj\Debug\EF.csproj.CopyComplete
 D:\Kacper\Documents\Visual Studio\C#\WPF\DapperDatabase\Data\Model\EF\obj\Debug\EF.dll
 D:\Kacper\Documents\Visual Studio\C#\WPF\DapperDatabase\Data\Model\EF\obj\Debug\EF.pdb
+D:\Kacper\Documents\Visual Studio\C#\WPF\Database\Data\Model\EF\obj\Debug\EF.csproj.CoreCompileInputs.cache
+D:\Kacper\Documents\Visual Studio\C#\WPF\Database\Data\Model\EF\obj\Debug\EF.dll
+D:\Kacper\Documents\Visual Studio\C#\WPF\Database\Data\Model\EF\obj\Debug\EF.pdb
+D:\Kacper\Documents\Visual Studio\C#\WPF\Database\Data\Model\EF\bin\Debug\EF.dll.config
+D:\Kacper\Documents\Visual Studio\C#\WPF\Database\Data\Model\EF\bin\Debug\EF.dll
+D:\Kacper\Documents\Visual Studio\C#\WPF\Database\Data\Model\EF\bin\Debug\EF.pdb
+D:\Kacper\Documents\Visual Studio\C#\WPF\Database\Data\Model\EF\bin\Debug\EntityFramework.dll
+D:\Kacper\Documents\Visual Studio\C#\WPF\Database\Data\Model\EF\bin\Debug\EntityFramework.SqlServer.dll
+D:\Kacper\Documents\Visual Studio\C#\WPF\Database\Data\Model\EF\bin\Debug\EntityFramework.xml
+D:\Kacper\Documents\Visual Studio\C#\WPF\Database\Data\Model\EF\bin\Debug\EntityFramework.SqlServer.xml
+D:\Kacper\Documents\Visual Studio\C#\WPF\Database\Data\Model\EF\obj\Debug\EF.csproj.CopyComplete
+D:\Kacper\Documents\Visual Studio\C#\WPF\Database\Data\Model\EF\obj\Debug\EF.csprojAssemblyReference.cache
+D:\Kacper\Documents\Visual Studio\C#\WPF\Database\Data\Model\EF\bin\Debug\Logs.dll
+D:\Kacper\Documents\Visual Studio\C#\WPF\Database\Data\Model\EF\bin\Debug\Logs.pdb

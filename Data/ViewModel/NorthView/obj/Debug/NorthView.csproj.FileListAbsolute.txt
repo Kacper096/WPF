@@ -10,3 +10,17 @@ D:\Kacper\Documents\Visual Studio\C#\WPF\DapperDatabase\Data\ViewModel\NorthView
 D:\Kacper\Documents\Visual Studio\C#\WPF\DapperDatabase\Data\ViewModel\NorthView\obj\Debug\NorthView.csproj.CopyComplete
 D:\Kacper\Documents\Visual Studio\C#\WPF\DapperDatabase\Data\ViewModel\NorthView\obj\Debug\NorthView.dll
 D:\Kacper\Documents\Visual Studio\C#\WPF\DapperDatabase\Data\ViewModel\NorthView\obj\Debug\NorthView.pdb
+D:\Kacper\Documents\Visual Studio\C#\WPF\Database\Data\ViewModel\NorthView\obj\Debug\NorthView.csprojAssemblyReference.cache
+D:\Kacper\Documents\Visual Studio\C#\WPF\Database\Data\ViewModel\NorthView\obj\Debug\NorthView.csproj.CoreCompileInputs.cache
+D:\Kacper\Documents\Visual Studio\C#\WPF\Database\Data\ViewModel\NorthView\obj\Debug\NorthView.dll
+D:\Kacper\Documents\Visual Studio\C#\WPF\Database\Data\ViewModel\NorthView\obj\Debug\NorthView.pdb
+D:\Kacper\Documents\Visual Studio\C#\WPF\Database\Data\ViewModel\NorthView\bin\Debug\NorthView.dll
+D:\Kacper\Documents\Visual Studio\C#\WPF\Database\Data\ViewModel\NorthView\bin\Debug\NorthView.pdb
+D:\Kacper\Documents\Visual Studio\C#\WPF\Database\Data\ViewModel\NorthView\bin\Debug\EF.dll
+D:\Kacper\Documents\Visual Studio\C#\WPF\Database\Data\ViewModel\NorthView\bin\Debug\EntityFramework.dll
+D:\Kacper\Documents\Visual Studio\C#\WPF\Database\Data\ViewModel\NorthView\bin\Debug\EF.pdb
+D:\Kacper\Documents\Visual Studio\C#\WPF\Database\Data\ViewModel\NorthView\bin\Debug\EF.dll.config
+D:\Kacper\Documents\Visual Studio\C#\WPF\Database\Data\ViewModel\NorthView\bin\Debug\EntityFramework.xml
+D:\Kacper\Documents\Visual Studio\C#\WPF\Database\Data\ViewModel\NorthView\obj\Debug\NorthView.csproj.CopyComplete
+D:\Kacper\Documents\Visual Studio\C#\WPF\Database\Data\ViewModel\NorthView\bin\Debug\Logs.dll
+D:\Kacper\Documents\Visual Studio\C#\WPF\Database\Data\ViewModel\NorthView\bin\Debug\Logs.pdb

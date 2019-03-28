@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EF", "Data\Model\EF\EF.cspr
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NorthView", "Data\ViewModel\NorthView\NorthView.csproj", "{72A14922-DB39-4BF2-A423-D7FE21F7303C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Logs", "Data\Model\Logs\Logs.csproj", "{6533C18A-E68A-4D11-87A7-29D4F8AEC5E1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{72A14922-DB39-4BF2-A423-D7FE21F7303C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{72A14922-DB39-4BF2-A423-D7FE21F7303C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{72A14922-DB39-4BF2-A423-D7FE21F7303C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6533C18A-E68A-4D11-87A7-29D4F8AEC5E1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6533C18A-E68A-4D11-87A7-29D4F8AEC5E1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6533C18A-E68A-4D11-87A7-29D4F8AEC5E1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6533C18A-E68A-4D11-87A7-29D4F8AEC5E1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

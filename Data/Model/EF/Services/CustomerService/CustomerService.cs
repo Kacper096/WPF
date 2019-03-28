@@ -1,5 +1,8 @@
-﻿using System;
+﻿using EF.Services.Model;
+using Logs;
+using System;
 using System.Collections.Generic;
+using System.Data.Entity.Validation;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -62,18 +65,18 @@ namespace EF.Services.CustomerService
         /// Get Headers Customers
         /// </summary>
         /// <returns></returns>
-        public ICollection<Customer> GetCustomerHeaders()
+        public ICollection<CustomerHeader> GetCustomerHeaders()
         {
-            ICollection<Customer> _customers;
+            ICollection<CustomerHeader> _customers;
 
             using (var context = new NorthwindEntities())
             {
                 try
                 {
-                    return _customers = context.Customers.Select(x => new Customer
+                    return _customers = context.Customers.Select(x => new CustomerHeader
                     {
-                       CustomerID = x.CustomerID,
-                       CompanyName = x.CompanyName,
+                       ID = x.CustomerID,
+                       FullName = x.CompanyName,
                        Country = x.Country,
                        City = x.City
                     }).ToList();
@@ -141,16 +144,31 @@ namespace EF.Services.CustomerService
         /// <returns></returns>
         public bool InsertCustomer(Customer customer)
         {
-            using (var context = new NorthwindEntities())
+            try
             {
-                context.Customers.Add(customer);
-                var result = context.SaveChanges();
-
-                if (result > 0)
-                    return true;
-                else
-                    return false;
+                using (var context = new NorthwindEntities())
+                {
+                    context.Customers.Add(customer);
+                    var result = context.SaveChanges();
+                    if (result > 0)
+                        return true;
+                    else
+                        return false;
+                }
             }
+            catch(DbEntityValidationException db)
+            {
+                foreach(var eve in db.EntityValidationErrors)
+                {
+                    
+                    foreach (var ve in eve.ValidationErrors)
+                    {
+                        StringBuilder exception = new StringBuilder("Property: ").Append(ve.PropertyName).Append("Error: ").Append(ve.ErrorMessage).AppendLine(" " + DateTime.Now.Date);
+                        File.WriteToFile("ef_except",exception.ToString());
+                    }
+                }
+            }
+            return false;
         }
 
         /// <summary>

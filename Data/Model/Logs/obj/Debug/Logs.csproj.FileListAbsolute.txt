@@ -1,0 +1,6 @@
+D:\Kacper\Documents\Visual Studio\C#\WPF\Database\Data\Model\Logs\bin\Debug\Logs.dll
+D:\Kacper\Documents\Visual Studio\C#\WPF\Database\Data\Model\Logs\bin\Debug\Logs.pdb
+D:\Kacper\Documents\Visual Studio\C#\WPF\Database\Data\Model\Logs\obj\Debug\Logs.csprojAssemblyReference.cache
+D:\Kacper\Documents\Visual Studio\C#\WPF\Database\Data\Model\Logs\obj\Debug\Logs.csproj.CoreCompileInputs.cache
+D:\Kacper\Documents\Visual Studio\C#\WPF\Database\Data\Model\Logs\obj\Debug\Logs.dll
+D:\Kacper\Documents\Visual Studio\C#\WPF\Database\Data\Model\Logs\obj\Debug\Logs.pdb

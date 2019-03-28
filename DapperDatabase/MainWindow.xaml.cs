@@ -7,9 +7,7 @@ using System.Threading.Tasks;
 
 namespace DapperDatabase
 {
-    /// <summary>
-    /// Logika interakcji dla klasy MainWindow.xaml
-    /// </summary>
+    
     public partial class MainWindow : Window
     {
         
@@ -17,6 +15,8 @@ namespace DapperDatabase
         {
             InitializeComponent();
             LimitCharCreateCustomer();
+            CustomerViewModel customerViewModel = new NorthView.CustomerViewModel();
+            this.DataContext = customerViewModel;
             
         }
         /// <summary>
@@ -37,6 +37,7 @@ namespace DapperDatabase
 
             }
         }
+
         /// <summary>
         /// Views Customer Data
         /// </summary>
@@ -44,11 +45,23 @@ namespace DapperDatabase
         /// <param name="e"></param>
         private void ShowData_Click(object sender, RoutedEventArgs e)
         {
-            OrdersData.Visibility = Visibility.Collapsed;
-            CustomersData.Visibility = Visibility.Visible;
-            
-            var cust = new CustomerView();
-            this.DataContext = cust.Customers;
+            if (sender is Button button)
+            {
+                OrdersData.Visibility = Visibility.Collapsed;
+                CustomersData.Visibility = Visibility.Visible;
+
+                var cust = new CustomerView();
+                if (button.Content.ToString().Contains("Details"))
+                {
+                    CustomersData.DataContext = cust.Customers;
+                    button.Content = "View";
+                }
+                else
+                {
+                    CustomersData.DataContext = cust.CustomerHeaders;
+                    button.Content = "See Details";
+                }
+            }
            
         }
 

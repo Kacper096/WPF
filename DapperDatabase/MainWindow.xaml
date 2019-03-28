@@ -62,7 +62,7 @@
         <StackPanel Name="Button_Bar" Orientation="Vertical" Width="175" DockPanel.Dock="Left" Margin="-182,0,0,0" ScrollViewer.VerticalScrollBarVisibility="Auto">
             <Button Name="CustomerButton" Content="Customer" Height="50" Click="CustomerButton_Click" Margin="0,0,5,0"/>
             <StackPanel Name="SubMenuCustomerButton" Visibility="Collapsed">
-                <Button Name="ViewDataButton" Content="View" Height="50"  Margin="0,0,5,0" Visibility="Visible" Click="ShowData_Click" />
+                <Button Name="ViewDataButton" Content="View" Height="50"  Margin="0,0,5,0" Visibility="Visible" Click="ShowData_Click"/>
                 <Button Name="CreateCustomerButton" Content="Create" Height="50"  Margin="0,0,5,0" Visibility="Visible" Click="show_Click"/>
             </StackPanel>
             <!--<Button Name="OrderButton" Content="Order" Height="50" Click="OrderButton_Click" Margin="0,0,5,0"/>-->
@@ -82,7 +82,7 @@
             </Grid>
             <StackPanel Name="RightMenu" Grid.Column="1" Margin="0,0,-402,0" Visibility="Visible">
                 <Border BorderBrush="DarkGray" BorderThickness="2" Margin="0,0,-5,-5" DockPanel.Dock="Right" Width="auto">
-                    <Grid Name="CreateCustomer" HorizontalAlignment="Right" Visibility="Visible" Margin="5,5,15,5" Width="auto">
+                    <Grid Name="CreateCustomer" HorizontalAlignment="Right" Visibility="Visible" Margin="5,5,15,5" Width="auto" >
                         <Grid.RowDefinitions>
                             <RowDefinition Height="auto" />
                             <RowDefinition Height="auto"/>
@@ -102,23 +102,21 @@
                         <Label Content="Create Customer" Grid.ColumnSpan="2" IsEnabled="True" Grid.Row="0" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"
                          Margin="0,0,0,3" FontSize="15.5" FontWeight="SemiBold" />
                         <Label Content="Company Name" Grid.Row="1" IsEnabled="True" Margin="0,0,0,3"/>
-                        <TextBox Width="auto"  Grid.Row="1" Grid.Column="1" VerticalContentAlignment="Center" HorizontalContentAlignment="Left" Margin="0,0,0,3" />
+                        <TextBox Width="auto"  Grid.Row="1" Grid.Column="1" VerticalContentAlignment="Center" HorizontalContentAlignment="Left" Margin="0,0,0,3" Text="{Binding Mode=OneWayToSource, Path=NewCustomer.CompanyName}" />
                         <Label Content="First Name" Grid.Row="2" IsEnabled="True" Margin="0,0,0,3"/>
-                        <TextBox Width="auto"  Grid.Row="2" Grid.Column="1" VerticalContentAlignment="Center" HorizontalContentAlignment="Left" Margin="0,0,0,3"/>
+                        <TextBox Width="auto"  Grid.Row="2" Grid.Column="1" VerticalContentAlignment="Center" HorizontalContentAlignment="Left" Margin="0,0,0,3" Text="{Binding Mode=OneWayToSource, Path=FirstName}"/>
                         <Label Content="Last Name" Grid.Row="3" IsEnabled="True" Margin="0,0,0,3"/>
-                        <TextBox Width="auto"  Grid.Row="3" Grid.Column="1" VerticalContentAlignment="Center" HorizontalContentAlignment="Left" Margin="0,0,0,3"/>
-                        <Label Content="Job Title" Grid.Row="4" IsEnabled="True" Margin="0,0,0,3"/>
-                        <TextBox Width="auto"  Grid.Row="4" Grid.Column="1" VerticalContentAlignment="Center" HorizontalContentAlignment="Left" Margin="0,0,0,3"/>
+                        <TextBox Width="auto"  Grid.Row="3" Grid.Column="1" VerticalContentAlignment="Center" HorizontalContentAlignment="Left" Margin="0,0,0,3" Text="{Binding Mode=OneWayToSource, Path=LastName}"/>
                         <Label Content="Country" Grid.Row="5" IsEnabled="True" Margin="0,0,0,3"/>
-                        <TextBox Width="auto"  Grid.Row="5" Grid.Column="1" VerticalContentAlignment="Center" HorizontalContentAlignment="Left" Margin="0,0,0,3"/>
+                        <TextBox Width="auto"  Grid.Row="5" Grid.Column="1" VerticalContentAlignment="Center" HorizontalContentAlignment="Left" Margin="0,0,0,3" Text="{Binding Mode=OneWayToSource, Path=NewCustomer.Country}"/>
                         <Label Content="City" Grid.Row="6" IsEnabled="True" Margin="0,0,0,3"/>
-                        <TextBox Width="auto"  Grid.Row="6" Grid.Column="1" VerticalContentAlignment="Center" HorizontalContentAlignment="Left" Margin="0,0,0,3"/>
+                        <TextBox Width="auto"  Grid.Row="6" Grid.Column="1" VerticalContentAlignment="Center" HorizontalContentAlignment="Left" Margin="0,0,0,3" Text="{Binding Mode=OneWayToSource, Path=NewCustomer.City}"/>
                         <Label Content="Address" Grid.Row="7" IsEnabled="True" Margin="0,0,0,3"/>
-                        <TextBox Width="auto"  Grid.Row="7" Grid.Column="1" VerticalContentAlignment="Center" HorizontalContentAlignment="Left" Margin="0,0,0,3"/>
+                        <TextBox Width="auto"  Grid.Row="7" Grid.Column="1" VerticalContentAlignment="Center" HorizontalContentAlignment="Left" Margin="0,0,0,3" Text="{Binding Mode=OneWayToSource, Path=NewCustomer.Address}"/>
                         <Label Content="Buisness Phone" Grid.Row="8" IsEnabled="True" Margin="0,0,0,3"/>
-                        <TextBox Width="auto"  Grid.Row="8" Grid.Column="1" VerticalContentAlignment="Center" HorizontalContentAlignment="Left" Margin="0,0,0,3"/>
+                        <TextBox Width="auto"  Grid.Row="8" Grid.Column="1" VerticalContentAlignment="Center" HorizontalContentAlignment="Left" Margin="0,0,0,3" Text="{Binding Mode=OneWayToSource, Path=NewCustomer.Phone}"/>
                         <Button Width="auto" MinHeight="38" MinWidth="100" Grid.Row="9" Grid.Column="0"  VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Margin="0,20,0,3"
-                        Grid.ColumnSpan="2" Content="Create" />
+                        Grid.ColumnSpan="2" Content="Create" Command="{Binding SaveCommand}" />
                     </Grid>
                 </Border>
             </StackPanel>

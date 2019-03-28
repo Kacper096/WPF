@@ -11,6 +11,7 @@ namespace NorthView.Helpers
     {
         #region Fields
         readonly Action<object> _exec;
+        readonly Action exec;
         readonly Predicate<object> _canExec;
 
         #endregion
@@ -35,6 +36,8 @@ namespace NorthView.Helpers
             _exec = execute ?? throw new ArgumentNullException("execute");
             _canExec = canExecute;
         }
+
+       
         #endregion
 
         #region Command Members
